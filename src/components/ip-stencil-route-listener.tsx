@@ -15,20 +15,23 @@ let lastEvent = '';
 })
 export class IpStencilRouteListener implements ComponentInterface {
   @Prop()
-  props: RouteRenderProps | undefined;
+  private props: RouteRenderProps | undefined;
 
   @Event()
   pageEnter: EventEmitter<LocationSegments>;
   @Event()
   pageLeave: EventEmitter<LocationSegments>;
 
-  localPageSegments: LocationSegments | null = null;
+  private localPageSegments: LocationSegments | null = null;
 
-  get currentPageLocation(): LocationSegments {
+  private get currentPageLocation(): LocationSegments {
     return this.props.history.location;
   }
 
-  _callEvent(event: 'pageLeave' | 'pageEnter', location: LocationSegments) {
+  private _callEvent(
+    event: 'pageLeave' | 'pageEnter',
+    location: LocationSegments
+  ) {
     if (lastEvent === event && lastKey === location.key) return;
     if (event === 'pageEnter') {
       this.pageEnter.emit(location);
@@ -41,7 +44,7 @@ export class IpStencilRouteListener implements ComponentInterface {
 
   componentWillLoad() {
     if (!this.props) {
-      throw Error('Please add props to <stencil-route-listener />!');
+      throw Error('Please add props to <ip-stencil-route-listener />!');
     }
     this.localPageSegments = this.currentPageLocation;
     lastKey = this.currentPageLocation.key;
