@@ -22,6 +22,8 @@ A simple listener around [Stencil router](https://github.com/ionic-team/stencil-
 
 ## Using Example
 
+Check out this [demo](https://stencil-route-listener.netlify.com/)
+
 ```js
   @State()
   pageState: string[] = [];
@@ -45,12 +47,14 @@ A simple listener around [Stencil router](https://github.com/ionic-team/stencil-
               url="/"
               component="ip-app-home"
               exact={true}
+              // The Magic happens here
               routeRender={props => <ip-stencil-route-listener props={props} />}
             />
             <stencil-route
               url="/about"
               exact={true}
               component="ip-app-about"
+              // The Magic happens here
               routeRender={props => <ip-stencil-route-listener props={props} />}
             />
           </stencil-route-switch>
