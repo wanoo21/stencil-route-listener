@@ -9,6 +9,7 @@ import { RouteRenderProps, LocationSegments } from '@stencil/router';
 
 let lastKey = '';
 let lastEvent = '';
+let props: RouteRenderProps;
 
 @Component({
   tag: 'ip-stencil-route-listener'
@@ -25,7 +26,7 @@ export class IpStencilRouteListener implements ComponentInterface {
   private localPageSegments: LocationSegments | null = null;
 
   private get currentPageLocation(): LocationSegments {
-    return this.props.history.location;
+    return (this.props || props).history.location;
   }
 
   private _callEvent(
@@ -46,6 +47,7 @@ export class IpStencilRouteListener implements ComponentInterface {
     if (!this.props) {
       throw Error('Please add props to <ip-stencil-route-listener />!');
     }
+    props = this.props;
     this.localPageSegments = this.currentPageLocation;
     lastKey = this.currentPageLocation.key;
   }

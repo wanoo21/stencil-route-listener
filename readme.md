@@ -10,11 +10,6 @@ A simple listener around [Stencil router](https://github.com/ionic-team/stencil-
 
 - Put a script tag similar to this `<script src='https://unpkg.com/ip-stencil-route-listener@0.0.1/dist/ip-stencil-route-listener.js'></script>` in the head of your index.html
 
-### Node Modules
-
-- Run `npm install ip-stencil-route-listener --save`
-- Put a script tag similar to this `<script src='node_modules/ip-stencil-route-listener/dist/ip-stencil-route-listener.js'></script>` in the head of your index.html
-
 ### In a stencil-starter app
 
 - Run `npm install ip-stencil-route-listener --save`
