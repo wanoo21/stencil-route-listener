@@ -1,10 +1,10 @@
-import { Component, ComponentInterface, Listen, State } from '@stencil/core';
+import { Component, h, Listen, State } from '@stencil/core';
 import { LocationSegments } from '@stencil/router';
 
 @Component({
   tag: 'ip-app-root'
 })
-export class IpAppRoot implements ComponentInterface {
+export class IpAppRoot {
   @State()
   pageState: string[] = [];
 
