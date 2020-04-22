@@ -1,10 +1,4 @@
-import {
-  Component,
-  Prop,
-  Event,
-  EventEmitter,
-  h
-} from '@stencil/core';
+import { Component, Prop, Event, EventEmitter, h } from '@stencil/core';
 import { RouteRenderProps, LocationSegments } from '@stencil/router';
 
 let lastKey = '';
@@ -12,7 +6,7 @@ let lastEvent = '';
 let props: RouteRenderProps;
 
 @Component({
-  tag: 'ip-stencil-route-listener'
+  tag: 'ip-stencil-route-listener',
 })
 export class IpStencilRouteListener {
   @Prop() props: RouteRenderProps | undefined;

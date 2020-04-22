@@ -8,7 +8,7 @@ A simple listener around [Stencil router](https://github.com/ionic-team/stencil-
 
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/ip-stencil-route-listener@0.0.1/dist/ip-stencil-route-listener.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://unpkg.com/ip-stencil-route-listener@2.0.0/dist/ip-stencil-route-listener.js'></script>` in the head of your index.html
 
 ### In a stencil-starter app
 
