@@ -1,9 +1,9 @@
-import { Component, ComponentInterface } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'ip-app-about'
 })
-export class IpAppAbout implements ComponentInterface {
+export class IpAppAbout {
   render() {
     return (
       <div>

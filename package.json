@@ -1,8 +1,12 @@
 {
   "name": "ip-stencil-route-listener",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A simple listener around Stencil router.",
-  "module": "dist/esm/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "unpkg": "dist/ionic/ionic.js",
+  "collection:main": "dist/collection/index.js",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
@@ -14,10 +18,10 @@
     "start": "stencil build --dev --watch --serve"
   },
   "dependencies": {
-    "@stencil/router": "^0.3.1"
+    "@stencil/router": "^1.0.0"
   },
   "devDependencies": {
-    "@stencil/core": "^0.15.2"
+    "@stencil/core": "^1.0.0"
   },
   "repository": {
     "type": "git",

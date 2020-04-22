@@ -1,9 +1,9 @@
 import {
   Component,
-  ComponentInterface,
   Prop,
   Event,
-  EventEmitter
+  EventEmitter,
+  h
 } from '@stencil/core';
 import { RouteRenderProps, LocationSegments } from '@stencil/router';
 
@@ -14,9 +14,8 @@ let props: RouteRenderProps;
 @Component({
   tag: 'ip-stencil-route-listener'
 })
-export class IpStencilRouteListener implements ComponentInterface {
-  @Prop()
-  private props: RouteRenderProps | undefined;
+export class IpStencilRouteListener {
+  @Prop() props: RouteRenderProps | undefined;
 
   @Event()
   pageEnter: EventEmitter<LocationSegments>;
